@@ -30,18 +30,19 @@ It uses **TextBlob** for sentiment detection and **Hugging Face Transformers (GP
 ### └── README.md # Project documentation
 
 
-# Quick start
+## Quick start
 
-## 1. Create a virtual environment (recommended): 
+### 1. Create a virtual environment (recommended): 
 #### python -m venv venv source 
 #### venv/bin/activate   # macOS / Linux 
 #### venv\Scripts\activate     # Windows
 
-## 2. Install requirements: pip install -r requirements.txt
+### 2. Install requirements: pip install -r requirements.txt
 
-## 3. Run the app: python app.py
+### 3. Run the app: python app.py
 
-
+## Frontend Interface
+### <img width="1920" height="1020" alt="screencapture-127-0-0-1-5000-2025-10-08-01_02_00" src="https://github.com/user-attachments/assets/727c4e1a-b31c-47f9-972d-e991b47b52a5" />
 
 
 
