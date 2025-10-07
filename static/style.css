@@ -10,8 +10,9 @@ body {
   color: #fff;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 40px 10px;
 }
 
@@ -59,6 +60,13 @@ label {
   font-weight: 600;
   color: #cfd8dc;
   font-size: 0.95rem;
+}
+
+.examples {
+  font-size: 0.85rem;
+  color: #90caf9;
+  margin-top: -5px;
+  margin-bottom: 5px;
 }
 
 textarea,
@@ -109,8 +117,8 @@ button:hover {
   font-size: 1rem;
   line-height: 1.6;
   word-wrap: break-word;
-  overflow-x: hidden;
   overflow-y: auto;
+  overflow-x: hidden;
   max-height: 400px;
 }
 
@@ -127,6 +135,21 @@ button:hover {
   margin-top: 8px;
 }
 
+/* Sentiment color highlights */
+.sentiment.positive {
+  color: #4caf50; /* green */
+  font-weight: bold;
+}
+.sentiment.negative {
+  color: #ef5350; /* red */
+  font-weight: bold;
+}
+.sentiment.neutral {
+  color: #ffb300; /* yellow */
+  font-weight: bold;
+}
+
+/* Placeholder before generation */
 .placeholder {
   background: rgba(0, 0, 0, 0.25);
   border: 2px dashed rgba(100, 181, 246, 0.4);
@@ -135,6 +158,14 @@ button:hover {
   text-align: center;
   color: #90caf9;
   font-style: italic;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #90caf9;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
