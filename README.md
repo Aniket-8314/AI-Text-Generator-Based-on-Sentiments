@@ -30,7 +30,7 @@ It uses **TextBlob** for sentiment detection and **Hugging Face Transformers (GP
 ### └── README.md # Project documentation
 
 
-Quick start
+# Quick start
 
 ## 1. Create a virtual environment (recommended): 
 python -m venv venv source 
