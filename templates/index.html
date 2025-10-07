@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Text Generator (Sentiment)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>AI TEXT GENERATOR (BASED ON SENTIMENTS)</h1>
+
+    <div class="main-content">
+      <!-- ===== Left Side: Input Form ===== -->
+      <div class="form-box">
+        <form method="POST">
+          <label for="prompt">Enter your topic or idea:</label>
+          <textarea
+            name="prompt"
+            id="prompt"
+            rows="5"
+            placeholder="Write a message to your friend after a tough but rewarding exam"
+            required>{{ prompt }}</textarea>
+
+          <label for="sentiment">Select sentiment:</label>
+          <select name="sentiment" id="sentiment">
+            <option value="auto" {% if selected_sentiment == 'auto' %}selected{% endif %}>Auto Detect</option>
+            <option value="positive" {% if selected_sentiment == 'positive' %}selected{% endif %}>Positive</option>
+            <option value="negative" {% if selected_sentiment == 'negative' %}selected{% endif %}>Negative</option>
+            <option value="neutral" {% if selected_sentiment == 'neutral' %}selected{% endif %}>Neutral</option>
+          </select>
+
+          <label for="model">Choose model:</label>
+          <select name="model" id="model">
+            <option value="openai-community/gpt2">GPT-2 (Fast)</option>
+            <option value="openai-community/gpt2-medium">GPT-2 (Medium)</option>
+          </select>
+
+          <label for="length">Maximum text length:</label>
+          <input type="number" id="length" name="length" min="50" max="1000" value="{{ length }}">
+
+          <button type="submit">Generate Text</button>
+        </form>
+      </div>
+
+      <!-- ===== Right Side: Output ===== -->
+      <div class="output-box">
+        {% if output %}
+        <div class="output">
+          {% if sentiment %}
+            <p><strong>Detected Sentiment:</strong> {{ sentiment }}</p>
+          {% endif %}
+          <p><strong>Generated Text:</strong></p>
+          <div class="generated-text">{{ output }}</div>
+        </div>
+        {% else %}
+        <div class="placeholder">
+          <p>✨ Your generated text will appear here after you click <strong>Generate Text</strong>.</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
