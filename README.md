@@ -18,16 +18,16 @@ It uses **TextBlob** for sentiment detection and **Hugging Face Transformers (GP
 
 ## 🏗️ Project Structure
 
-## AI-Text-Generator/
-## │
-## ├── app.py # Main Flask app (handles routes & logic)
-## ├── utils.py # Helper functions for sentiment & generation
-## ├── templates/
-## │ └── index.html # Main HTML page
-## ├── static/
-## │ └── style.css # Stylesheet for UI
-## ├── requirements.txt # Dependencies
-## └── README.md # Project documentation
+### AI-Text-Generator/
+### │
+### ├── app.py # Main Flask app (handles routes & logic)
+### ├── utils.py # Helper functions for sentiment & generation
+### ├── templates/
+### │ └── index.html # Main HTML page
+### ├── static/
+### │ └── style.css # Stylesheet for UI
+### ├── requirements.txt # Dependencies
+### └── README.md # Project documentation
 
 
 Quick start
